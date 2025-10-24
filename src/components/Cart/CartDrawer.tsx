@@ -1,6 +1,7 @@
 "use client";
 import { useCartStore } from "@/store/cartStore";
 import { useUIStore } from "@/store/uiStore";
+import { formattedCurrency } from "@/utils/currency";
 
 export const CartDrawer = () => {
   const { isCartOpen, closeCart } = useUIStore();
@@ -53,7 +54,7 @@ export const CartDrawer = () => {
                     <div>
                       <p className="text-sm font-semibold text-black">{item.title}</p>
                       <p className="text-xs text-black">
-                        ${item.price} × {item.quantity}
+                        {formattedCurrency(item.price)} | quantity: {item.quantity}
                       </p>
                     </div>
                   </div>
@@ -73,7 +74,7 @@ export const CartDrawer = () => {
         <div className="border-t p-4">
           <div className="flex justify-between font-semibold text-lg mb-3 text-black">
             <span>Total:</span>
-            <span>${total.toFixed(2)}</span>
+            <span>{formattedCurrency(total)}</span>
           </div>
           <button
             onClick={clearCart}

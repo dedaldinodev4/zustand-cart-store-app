@@ -1,6 +1,7 @@
 "use client";
 import { useCartStore } from "@/store/cartStore";
 import { useUIStore } from "@/store/uiStore";
+import { formattedCurrency } from "@/utils/currency";
 
 export const Header = () => {
   const { items, total } = useCartStore();
@@ -12,7 +13,7 @@ export const Header = () => {
 
       <div className="flex items-center gap-6">
         <div className="text-gray-600">
-          <span className="font-semibold">Total:</span> ${total.toFixed(2)}
+          <span className="font-semibold">Total:</span> {formattedCurrency(total)}
         </div>
         <div className="relative">
           <button

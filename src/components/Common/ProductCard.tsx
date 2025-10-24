@@ -1,5 +1,6 @@
 "use client"
 import { useCartStore } from "@/store/cartStore";
+import { formattedCurrency } from "@/utils/currency";
 
 export const ProductCard = ({ product }: { product: any }) => {
   const { addToCart } = useCartStore();
@@ -12,7 +13,7 @@ export const ProductCard = ({ product }: { product: any }) => {
         className="h-48 object-contain mx-auto"
       />
       <h3 className="text-lg font-semibold text-black mt-3 line-clamp-2">{product.title}</h3>
-      <p className="text-gray-600 mt-1 font-bold">${product.price}</p>
+      <p className="text-gray-600 mt-1 font-bold">{formattedCurrency(product.price)}</p>
       <button
         onClick={() =>
           addToCart({

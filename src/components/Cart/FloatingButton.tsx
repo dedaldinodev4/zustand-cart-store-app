@@ -2,6 +2,7 @@
 
 import { useCartStore } from "@/store/cartStore";
 import { useUIStore } from "@/store/uiStore";
+import { formattedCurrency } from "@/utils/currency";
 import { ShoppingCart } from "lucide-react";
 
 export const FloatingCartButton = () => {
@@ -20,7 +21,7 @@ export const FloatingCartButton = () => {
         {itemCount} item{itemCount > 1 ? "s" : ""}
       </div>
       <span className="bg-white text-blue-700 text-xs px-2 py-1 rounded-md font-bold">
-        ${total.toFixed(2)}
+        {formattedCurrency(total)}
       </span>
     </button>
   );
