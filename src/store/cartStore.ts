@@ -4,10 +4,12 @@ import { persist } from "zustand/middleware";
 
 export interface CartItem {
   id: string;
-  name: string;
+  title: string;
   price: number;
   quantity: number;
   image?: string;
+  category: string;
+  description: string;
 }
 
 interface CartState {

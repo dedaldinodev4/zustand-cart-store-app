@@ -1,8 +1,7 @@
-import { Counter } from "@/components/Counter";
-import { Cart } from "@/components/Cart";
+import Home from "@/components/Home";
 
 export default function App() {
   return (
-    <Cart />
+    <Home />
   );
 }
