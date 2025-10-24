@@ -6,7 +6,9 @@ import Link from 'next/link';
 
 export const Counter: React.FC = () => {
 
-  const { count, increase, decrease, reset } = useCounterStore()
+  const {count, increase, decrease, reset } = useCounterStore()
+
+
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-gray-800">
