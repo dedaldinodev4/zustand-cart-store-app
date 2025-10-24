@@ -1,7 +1,12 @@
 {
-  "name": "--template",
+  "name": "Zustand-cart-store-app",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Dedaldino Daniel",
+    "email": "dedaldinodev4@gmail.com",
+    "url": "https://github.com/dedaldinodev4/zustand-cart-store-app"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
