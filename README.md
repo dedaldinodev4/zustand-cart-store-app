@@ -36,5 +36,3 @@ A simple shopping cart built with React and Zustand.
 ## Screenshots
 
 ![ScreenShot 01](/public/images/preview-01.png)
-![ScreenShot 02](/public/images/preview-02.png)
-![ScreenShot 03](/public/images/preview-03.png)
