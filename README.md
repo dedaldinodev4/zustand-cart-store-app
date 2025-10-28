@@ -31,5 +31,10 @@ A simple shopping cart built with React and Zustand.
 
 ## Deploy on Vercel
 
-[Vercel Platform](https://zustand-cart-store-app.vercel.app).
+[Demo](https://zustand-cart-store-app.vercel.app).
 
+## Screenshots
+
+![ScreenShot 01](/public/images/preview-01.png)
+![ScreenShot 02](/public/images/preview-02.png)
+![ScreenShot 03](/public/images/preview-03.png)
