@@ -7,6 +7,8 @@ import { useCartStore } from "@/store/cartStore";
 import { FloatingCartButton } from "@/components/Cart/FloatingButton";
 import { usePaginationStore } from "@/store/paginationStore";
 
+import { ArrowRight, ArrowLeft } from 'lucide-react'
+
 
 const Home = () => {
   const { page, nextPage, prevPage, setPage } = usePaginationStore();
@@ -30,13 +32,13 @@ const Home = () => {
         ))}
       </div>
       {/* Pagination Controls */}
-      <div className="flex justify-center items-center mt-10 gap-4">
+      <div className="flex justify-center items-center mt-10 gap-4 mb-10">
         <button
           onClick={prevPage}
           disabled={page === 1}
           className="bg-white text-black font-bold cursor-pointer hover:bg-gray-300 px-4 py-2 rounded disabled:opacity-50"
         >
-          Previous
+          <ArrowLeft />
         </button>
         <span className="text-gray-700 font-semibold">Page {page}</span>
         <button
@@ -44,7 +46,7 @@ const Home = () => {
           disabled={!hasNextPage}
           className="bg-white text-black font-bold cursor-pointer hover:bg-gray-300 px-4 py-2 rounded disabled:opacity-50"
         >
-          Next
+          <ArrowRight />
         </button>
       </div>
     </main>
