@@ -1,12 +1,16 @@
 "use client"
 import { useCartStore } from "@/store/cartStore";
+import { useProductModalStore } from "@/store/productModalStore";
 import { formattedCurrency } from "@/utils/currency";
 
 export const ProductCard = ({ product }: { product: any }) => {
   const { addToCart } = useCartStore();
+  const { openModal } = useProductModalStore();
 
   return (
-    <div className="bg-white shadow-sm rounded-2xl p-4 hover:shadow-lg transition flex flex-col cursor-pointer">
+    <div 
+    onClick={() => openModal(product)}
+    className="bg-white shadow-sm rounded-2xl p-4 hover:shadow-lg transition flex flex-col cursor-pointer">
       <img
         src={product.image}
         alt={product.title}

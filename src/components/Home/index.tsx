@@ -8,6 +8,7 @@ import { FloatingCartButton } from "@/components/Cart/FloatingButton";
 import { usePaginationStore } from "@/store/paginationStore";
 
 import { ArrowRight, ArrowLeft } from 'lucide-react'
+import { ProductModal } from "../Common/ProductModal";
 
 
 const Home = () => {
@@ -22,10 +23,11 @@ const Home = () => {
   const hasNextPage = data?.hasNextPage ?? false;
 
   return (
-    <main>
+    <main className="relative">
       <Header />
       <CartDrawer />
       {items && <FloatingCartButton />}
+      <ProductModal />
       <div className="max-w-7xl mx-auto p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {products.map((product: any) => (
           <ProductCard key={product.id} product={product} />
